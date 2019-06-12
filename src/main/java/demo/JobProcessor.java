@@ -101,7 +101,7 @@ public class JobProcessor {
         String message = job.getCommand().getMessage();
 
         if (!previousJobType.equals(jobType)) {
-            completeJobs(jobType);
+            completeJobs(previousJobType);
         }
 
         if (jobType.equals(JobType.WRITE)) {
